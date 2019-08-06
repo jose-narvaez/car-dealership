@@ -20,4 +20,6 @@ Staff:
 Customer:
 - Can do the same search as staff users, but not having access to accident history information
 
+Class Diagram
+
 ![Class Diagram](classDiagram.jpg)
