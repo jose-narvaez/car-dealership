@@ -1,4 +1,4 @@
-# car-dealership
+# Car-dealership
 Car dealership system for costumers, staff and administrators developed using java and an object oriented approach (see the class diagram below).
 
 ![](GIFcarDealership.gif)
@@ -18,6 +18,6 @@ Staff:
 - Calculate revenue by day or month
 
 Customer:
--Can do the same search as staff users, but not having access to accident history information
+- Can do the same search as staff users, but not having access to accident history information
 
 ![Class Diagram](classDiagram.jpg)
