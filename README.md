@@ -13,7 +13,7 @@ Staff:
 - Add cars into sytem database through a file
 - Add a car into the system database
 - Sell cars
-- Print cars into a file sorting the cars by sold and unsold and their respective selling date
+- Print cars into a file, sorting the cars by sold and unsold and by their respective selling date
 - Search for cars
 - Calculate revenue by day or month
 
