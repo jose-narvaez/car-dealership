@@ -1,0 +1,31 @@
+HOW TO RUN THE CODE:
+
+The code needs to be executed using the cardealer.jar file. This file executes the LoginFrame class which asks the user to enter a username and a password. Then, the LoginFrame class creates an instance of Staff, Admin or Costumer depending on the credentials and executes the Staff or Costumer dialogs accordingly.
+
+DATABASE INSTRUCTIONS:
+
+The system uses the text file "cars-database.txt" as the cars database. The system does not load the database data into the system's memory once the system is executed, instead the system uses the function readCars which gets the file information as an ArrayList<Car> every time the user wants to perform an action on the file like readCars or sellCars for example. The method addCar and addCars adds cars to the "cars-database.txt" but it does not replace this database.
+
+USER INSTRUCTIONS:
+
+Log in Instructions for all users:
+The programs start by running the loginFrame class which asks the user to enter a username and a password. The user needs to enter both values and click on the "Log in" button. The loginFrame class validates the user and opens a CustomerDialog if the user is a Customer, or it opens a StaffDialog if the user is either a staff or an admin. If the user is not valid, then the system will show an error message to the user. Both the username and password are case sensitive.
+
+Instructions for Customer:
+Once the Customer has logged in, the Customer will be able to visualize a dialog where he will be able to search for cars. In order to search for cars, the Customer will first need to choose a search option by using the combobox. Then the user will need to fill in the respective fields and click on the "Search" button. Once the Customer clicks on the "Search" button, the results will be displayed in a table unless no cars were found for the specific query or there was an error in the input, and in those cases, the system will display an appropriate message. The user input is not case sensitive, e.g. the user could search "RED" or "red" when searching by colour.
+
+Instructions for Staff:
+Once the staff has logged in, he will be able to visualize a dialog where the system will allow him to perform the following actions: add cars to the database(by file and by entering values), sell cars, print cars to a file, calculate revenue (by month and day) and search for cars. In order to choose what action the staff wants to perform, he will need to click on the desired tab. 
+
+Search Tab: Under the search tab the staff will be able to search for cars using different input values, please refer to the Customer instructions above.
+
+Add Tab: Under the add tab, the staff will be able to choose how to add cars using the combobox. The option of adding one car at a time will show multiple fields that need to be filled before clicking on the "Add" button. It is important to notice that the format to enter the arrival and selling date is yyyy-mm-dd. If the arrival date is left empty or the format is incorrect, it will set the arrival date to the current date. If the format of the selling date is incorrect it will set the selling date to the current date, but if it is left empty, it will set the selling date to blank which means that the car has not been sold yet. In order to add cars using a file, the user needs to choose the file and the cars will be added. Both options for adding cars check if the cars to be added already exist on the database so a message will be shown saying if adding the cars was successful or not.
+
+Sell Car: under the sell tab, the staff will be able to see a table containing all available cars in the database. In order to sell a car, the staff will need to enter the plate of a car in the text field and then click on the "Sell Car" button. If the car has not been sold already, the system will show a message saying that the car has been sold and it will update the database which the user can see in the same tab. If the car that the staff wants to sell has been sold already or it does not exist then an error message will be displayed. 
+
+Print Cars: under the print cars tab the user will be able to print all the cars in the database. The file will contain first all the cars that have not been sold sorted by their arrival date and then all the sold cars sorted by their selling date. The cars will be printed to a text file called "cars-output.txt" once the staff clicks on the "Print Cars" button. A message will be displayed saying if printing was successful or not.
+
+Calculate Revenue: under the calculate revenue tab the staff will be able to calculate the revenue by month or by day. In order to calculate the revenue by month, the staff needs to enter a year and a month (the day can also be entered but it makes no difference) and click on the "calculate by month" button. To calculate by day the staff needs to enter the year, month and day and click on the "calculate by day" button. The results will be displayed in a text field below. The staff input is restricted, the valid years go from 1960 to the current year, the month goes from 1 to 12 and day from 1 to 31.
+
+Instructions for Admin:
+Once the admin has logged in, the admin will be able to see the same tabs as the staff(Please refer to the instructions for staff above) and will also be able to see the "Create User" tab. Under this tab, the admin will be able to add a user to the users' database. In order to do this, the admin needs to fill in the username, password and select a role for the user. Then by clicking on add user, a message will be displayed saying if the user has been added correctly or not in the case that the user already exists in the database. It is important to notice that usernames and passwords are case sensitive and password can be numbers, letters or any symbol.

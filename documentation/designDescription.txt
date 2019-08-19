@@ -1,0 +1,13 @@
+OBJECT ORIENTED DESIGN
+
+There are three different users that the system recognizes, these are defined by the abstract class User and the specialised classes Staff, Admin and Customer of type User. Since every user has a username, password and all users can search for cars, the abstract class User contains these attributes and implements an overloaded method searchCar which allows to search using different parameters. The User class also defines an abstract method readCars which the classes Staff and Customer need to implement, this is because users have different access to to the cars information (Customer cannot access the accident history).
+
+Because staff can add cars, sell them, print them and calculate revenue the class Staff implements these methods and additionally inherits the method search car and implements readCars, the abstract method from User. The Admin class is a specialised type of Staff, so it inherits all methods from Staff and User and implements a method to add users to the database.  
+
+The Customer class is a specialised type of User, so it only inherits from the class User and not from Staff or Customer. Because a Customer only has the ability to search for cars and this is inherited from User, the class Customer only needs to implement the abstract method readCars which excludes the accident history of cars. 
+
+The system recognizes 6 different types of cars, these cars are defined by the abstract class Car and the specialised classes of type Car: Suv, Mpv,Van, Hatchback, Saloon, and Coupe. Since every car has a plate, model, colour, mileage, accident history, transmission type, price, status, and arrival and selling dates these fields are attributes of the abstract class Car. Additionally, the class Car implements the Comparable<Car> interface in order to implement the compareTo(Car) method in order to compare cars by their status, selling date and arrival date. The Car class also defines three abstract classes: getType, getDoors, getSeats.
+
+Each of the six specialised classes of type Car inherits all attributes and methods from the class Car and each contains the constants DOORS, SEATS, and TYPE which determine the number of doors, seats and type that each class has. The Van class additionally has the size attribute as it is the only class that can have this attribute. 
+
+The Car class is associated with the User class since users have different methods on cars like searching for them. The LoginFrame is associated with the User class as the LoginFrame class validates any user using the validateUser function. The LoginFrame creates an instance of CustomerDialog or StaffDialog depending on the role of the validated user.
